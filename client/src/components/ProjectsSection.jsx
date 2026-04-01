@@ -6,19 +6,18 @@ import { useLanguage } from "../context/LanguageContext";
 const projects = [
   {
     id: 8,
-    title: "GenAxis",
-    category: "AI SaaS ",
-    description: "AI saas webapp build with PERN stack and Intigrated Gemini . OPEN SOURCE ",
+    title: "My Portfolio",
+    category: "Portfolio",
+    description: "Modern portfolio website showcasing projects, skills, and experience as a Frontend Developer with smooth animations and multi-language support.",
     image: "/projects/project8.png",
-    video: "/projects/videos/genaxix-demo.mp4",
-    tags: ["PERN Stack", "Clerk Auth", "Google Gemini", "Clerk Billing", "OPEN SOURCE"],
-    demoUrl: "https://genaxis.vercel.app",
-    githubUrl: "https://github.com/Prince-Elie/genaxis",
+    video: "/projects/videos/portfolio-demo.mp4",
+    tags: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/Prince-Elie/Elieco-Portfolio",
     featured: true,
     accentColor: "from-emerald-500 to-teal-600",
     status: "Live",
-    highlights: ["Image Generation", "Article writer", "Blog Writter","Resume Reviewer"],
-    hidden: true
+    highlights: ["Responsive Design", "Smooth Animations", "Multi-language Support"]
   },
   {
     id: 7,
