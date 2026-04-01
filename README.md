@@ -25,7 +25,7 @@ Je suis actuellement en **Master 1** d'informatique (Diplôme en 2027) et je me 
 
 ## 🛠 Mon expertise
 
-**Frontend:** React 18 • Vue.js • TypeScript • HTML • CSS • Tailwind • Bootstrap • GSAP
+**Frontend:** React• Next.js • Vue.js • TypeScript • HTML • CSS • Tailwind • Bootstrap • GSAP
 
 **Autres langages:** C • C++ • Haskell
 
