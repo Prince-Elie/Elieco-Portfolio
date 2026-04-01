@@ -137,3 +137,11 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Large video files (exceed GitHub's 100MB limit)
+*.mp4
+*.avi
+*.mov
+*.mpeg
+*.webm
+*.mkv
