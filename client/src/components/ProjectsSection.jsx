@@ -20,21 +20,6 @@ const projects = [
     highlights: ["Responsive Design", "Smooth Animations", "Multi-language Support"]
   },
   {
-    id: 7,
-    title: "Sunnyside ",
-    category: "Frontend Mentor Challenge",
-    description: "Hospital management platform with multi-role access, patient tracking, and billing systems.",
-    image: "/projects/project7.png",
-    video: "/projects/videos/nauracare-demo.mp4",
-  tags: ["HTML", "CSS", "JavaScript"],
-    demoUrl: "https://prince-elie.github.io/frontend-mentor-Sunnyside-landing-page-challenge/",
-    githubUrl: "https://github.com/Prince-Elie/frontend-mentor-Sunnyside-landing-page-challenge",
-    featured: true,
-    accentColor: "from-emerald-500 to-teal-600",
-    status: "Live",
-    highlights: ["Fully Responsive", "Challenge Completed", "Clean Code"]
-  },
-  {
     id: 1,
     title: "Drinkins",
     category: "Landing page",
@@ -48,6 +33,21 @@ const projects = [
     accentColor: "from-purple-500 to-indigo-600",
     status: "Live",
     highlights: ["Smooth GSAP Animations", "Responsive Design", "Performance Optimized"]
+  },
+  {
+    id: 7,
+    title: "Sunnyside ",
+    category: "Frontend Mentor Challenge",
+    description: "Hospital management platform with multi-role access, patient tracking, and billing systems.",
+    image: "/projects/project7.png",
+    video: "/projects/videos/nauracare-demo.mp4",
+  tags: ["HTML", "CSS", "JavaScript"],
+    demoUrl: "https://prince-elie.github.io/frontend-mentor-Sunnyside-landing-page-challenge/",
+    githubUrl: "https://github.com/Prince-Elie/frontend-mentor-Sunnyside-landing-page-challenge",
+    featured: true,
+    accentColor: "from-emerald-500 to-teal-600",
+    status: "Live",
+    highlights: ["Fully Responsive", "Challenge Completed", "Clean Code"]
   },
   {
     id: 2,
