@@ -12,7 +12,7 @@ const projects = [
     image: "/projects/project8.png",
     video: "/projects/videos/portfolio-demo.mp4",
     tags: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
-    demoUrl: "#",
+    demoUrl: "https://client-nu-peach-38.vercel.app",
     githubUrl: "https://github.com/Prince-Elie/Elieco-Portfolio",
     featured: true,
     accentColor: "from-emerald-500 to-teal-600",
