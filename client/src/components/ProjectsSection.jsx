@@ -17,7 +17,8 @@ const projects = [
     featured: true,
     accentColor: "from-emerald-500 to-teal-600",
     status: "Live",
-    highlights: ["Image Generation", "Article writer", "Blog Writter","Resume Reviewer"]
+    highlights: ["Image Generation", "Article writer", "Blog Writter","Resume Reviewer"],
+    hidden: true
   },
   {
     id: 7,
@@ -32,11 +33,11 @@ const projects = [
     featured: true,
     accentColor: "from-emerald-500 to-teal-600",
     status: "Live",
-    highlights: ["Multi-role system", "Patient management", "Payment integration"]
+    highlights: ["Fully Responsive", "Challenge Completed", "Clean Code"]
   },
   {
     id: 1,
-    title: "Vante & Co.",
+    title: "Drinkins",
     category: "Landing page",
     description: "Fashion marketplace with product recommendations and seamless checkout experience.",
     image: "/projects/project1.png",
@@ -47,7 +48,7 @@ const projects = [
     featured: true,
     accentColor: "from-purple-500 to-indigo-600",
     status: "Live",
-    highlights: ["Product catalog", "Shopping cart", "Payment processing"]
+    highlights: ["Smooth GSAP Animations", "Responsive Design", "Performance Optimized"]
   },
   {
     id: 2,
@@ -62,21 +63,22 @@ const projects = [
     featured: true,
     accentColor: "from-blue-500 to-cyan-600",
     status: "Live",
-    highlights: ["Real-time chat", "Media sharing", "User authentication"]
+    highlights: ["Real-time chat", "Media sharing", "User authentication"],
+    hidden: true
   },
   {
     id: 3,
-    title: "Blogni AI",
-    category: "Artificial Intelligence",
-    description: "AI-powered content generation platform with multi-language support.",
+    title: "Trackway",
+    category: "FinTech",
+    description: "tracking platform",
     image: "/projects/project3.png",
     video: "/projects/videos/blogni-demo.mp4",
-    tags: ["Next.js", "Gemini AI", "Clerk Auth", "Redis"],
-    demoUrl: "https://blogni.vercel.app",
-    githubUrl: "https://github.com/Prince-Elie/Blogni",
+    tags: ["React ", "Tailwind CSS", "Node.js"],
+    demoUrl: "https://prince-elie.github.io/trackway/",
+    githubUrl: "https://github.com/Prince-Elie/trackway",
     accentColor: "from-amber-500 to-orange-600",
     status: "Live",
-    highlights: ["AI content generation", "Multi-language", "User accounts"]
+    highlights: ["tracking", "Data visualization", "Budget planning"]
   },
   {
     id: 4,
@@ -104,7 +106,8 @@ const projects = [
     githubUrl: "https://github.com/Prince-Elie/Eattoo-food-delivery-website",
     accentColor: "from-violet-500 to-purple-600",
     status: "Live",
-    highlights: ["Restaurant listings", "Order system", "Location services"]
+    highlights: ["Restaurant listings", "Order system", "Location services"],
+    hidden: true
   },
   {
     id: 6,
@@ -118,7 +121,7 @@ const projects = [
     githubUrl: "#",
     accentColor: "from-orange-500 to-red-600",
     status: "Development",
-    highlights: ["Pets Adoption", "Pets finding", "Matching system"]
+    highlights: ["Pets Adoption", "Mapping systemP", "Matching system"]
   }
 ];
 
@@ -151,12 +154,12 @@ export const ProjectsSection = () => {
   const opacityBg = useTransform(scrollYProgress, [0, 0.5, 1], [0.1, 0.2, 0.1]);
 
   const filteredProjects = activeFilter === "All" 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
+    ? projects.filter(p => !p.hidden)
+    : projects.filter(project => project.category === activeFilter && !project.hidden);
   
   const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 3);
 
-  const categories = ["All", ...new Set(projects.map(project => project.category))];
+  const categories = ["All", ...new Set(projects.filter(p => !p.hidden).map(project => project.category))];
 
   const handleFilterChange = (category) => {
     setActiveFilter(category);
