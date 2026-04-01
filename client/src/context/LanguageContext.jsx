@@ -225,7 +225,7 @@ const translations = {
         approach: "Approche",
       },
       tabContent: {
-        personal: "Passionné par la création de solutions digitales qui font la différence. Quand je ne code pas, j'explore de nouvelles technologies, je contribue à l'open-source et j'accompagne des développeurs débutants.",
+        personal: "Passionné par la création d'expériences digitales élégantes et performantes. Quand je ne code pas, j'aime jouer au football, apprendre de nouvelles technologies et rester actif physiquement et mentalement.",
         professional: "Actuellement en Master 1 Informatique, j'ai réalisé 7+ projets avec des technologies frontend modernes. Je me spécialise dans les interfaces élégantes, la performance et l'amélioration continue de mes compétences.",
         approach: "Je crois au code propre, aux tests rigoureux et à la conception centrée sur l'utilisateur. Mon processus met l'accent sur la collaboration, les méthodes agiles et l'amélioration continue.",
       },
