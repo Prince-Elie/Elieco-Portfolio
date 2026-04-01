@@ -21,14 +21,14 @@ const projects = [
   },
   {
     id: 7,
-    title: "NauraCare",
-    category: "Healthcare SaaS",
+    title: "Sunnyside ",
+    category: "Frontend Mentor Challenge",
     description: "Hospital management platform with multi-role access, patient tracking, and billing systems.",
     image: "/projects/project7.png",
     video: "/projects/videos/nauracare-demo.mp4",
-    tags: ["React", "Node.js", "MongoDB", "Stripe", "JWT Auth"],
-    demoUrl: "https://nauracare.vercel.app",
-    githubUrl: "https://github.com/Prince-Elie/neuracare",
+  tags: ["HTML", "CSS", "JavaScript"],
+    demoUrl: "https://prince-elie.github.io/frontend-mentor-Sunnyside-landing-page-challenge/",
+    githubUrl: "https://github.com/Prince-Elie/frontend-mentor-Sunnyside-landing-page-challenge",
     featured: true,
     accentColor: "from-emerald-500 to-teal-600",
     status: "Live",
@@ -41,9 +41,9 @@ const projects = [
     description: "Fashion marketplace with product recommendations and seamless checkout experience.",
     image: "/projects/project1.png",
     video: "/projects/videos/vante-demo.mp4",
-    tags: ["React", "Node.js", "Stripe", "Redis"],
-    demoUrl: "https://e-commerce-website-4w6a.vercel.app",
-    githubUrl: "https://github.com/Prince-Elie/E-commerce-website",
+    tags: ["HTML5", "CSS3", "JavaScript", "GSAP"],
+    demoUrl: "https://prince-elie.github.io/Drinkins",
+    githubUrl: "https://github.com/Prince-Elie/Drinkins",
     featured: true,
     accentColor: "from-purple-500 to-indigo-600",
     status: "Live",
@@ -57,8 +57,8 @@ const projects = [
     image: "/projects/project2.png",
     video: "/projects/videos/converse-demo.mp4",
     tags: ["Socket.IO", "MongoDB", "React", "WebRTC"],
-    demoUrl: "https://converse-pro-frontend.vercel.app",
-    githubUrl: "https://github.com/Prince-Elie/converse-pro",
+    demoUrl: "https://prince-elie.github.io/Drinkins",
+    githubUrl: "https://github.com/Prince-Elie/Drinkins",
     featured: true,
     accentColor: "from-blue-500 to-cyan-600",
     status: "Live",
@@ -108,28 +108,28 @@ const projects = [
   },
   {
     id: 6,
-    title: "JobQue",
-    category: "HR Tech",
-    description: "Job matching platform with candidate tracking and application management.",
+    title: "Pets Adoption",
+    category: "Matching Tech",
+    description: "Pets adoption platform with matching system and preference management.",
     image: "/projects/project6.png",
-    video: "/projects/videos/jobque-demo.mp4",
-    tags: ["Next.js", "PostgreSQL", "Redis", "AI Integration"],
+    video: "/client/public/projects/videos/pets-adoption-demo.mp4",
+    tags: ["React", "Tailwind CSS", "TypeScript", "Node.js"],
     demoUrl: "#",
     githubUrl: "#",
     accentColor: "from-orange-500 to-red-600",
     status: "Development",
-    highlights: ["Job matching", "Candidate tracking", "Application system"]
+    highlights: ["Pets Adoption", "Pets finding", "Matching system"]
   }
 ];
 
 const categoryColors = {
-  "Healthcare SaaS": "from-emerald-500/20 to-teal-600/20 text-emerald-600 border-emerald-500/30",
+  "Frontend Mentor Challenge": "from-emerald-500/20 to-teal-600/20 text-emerald-600 border-emerald-500/30",
   "E-commerce": "from-purple-500/20 to-indigo-600/20 text-purple-600 border-purple-500/30",
   "Real-time Communication": "from-blue-500/20 to-cyan-600/20 text-blue-600 border-blue-500/30",
   "Artificial Intelligence": "from-amber-500/20 to-orange-600/20 text-amber-600 border-amber-500/30",
   "FinTech": "from-rose-500/20 to-pink-600/20 text-rose-600 border-rose-500/30",
   "Food Tech": "from-violet-500/20 to-purple-600/20 text-violet-600 border-violet-500/30",
-  "HR Tech": "from-orange-500/20 to-red-600/20 text-orange-600 border-orange-500/30"
+  "Matching Tech": "from-orange-500/20 to-red-600/20 text-orange-600 border-orange-500/30"
 };
 
 export const ProjectsSection = () => {

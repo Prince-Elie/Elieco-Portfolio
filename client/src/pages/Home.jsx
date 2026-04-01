@@ -1,5 +1,4 @@
 import { Navbar } from "../components/Navbar";
-import { CursorReveal } from "../components/CursorReveal";
 import { StarBackground } from "@/components/StarBackground";
 import { HeroSection } from "../components/HeroSection";
 import { AboutSection } from "../components/AboutSection";
@@ -14,7 +13,6 @@ export const Home = () => {
       {/* Theme Toggle */}
       {/* Background Effects */}
       <StarBackground />
-      <CursorReveal />
 
       {/* Navbar */}
       <Navbar />
