@@ -42,11 +42,11 @@ export const Footer = () => {
             <motion.div variants={itemVariants} className="space-y-4">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white">ELIE ADETONA</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm">{t.footer.tagline}</p>
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap gap-3">
                 {socialLinks.map((social, index) => (
                   <motion.a key={index} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}
-                    className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-300"
-                    whileHover={{ y: -2 }} whileTap={{ scale: 0.95 }}>
+                    className="p-2 rounded-lg text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300"
+                    whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                     {social.icon}
                   </motion.a>
                 ))}
@@ -72,8 +72,8 @@ export const Footer = () => {
               <h4 className="text-gray-900 dark:text-white font-medium mb-4 text-sm uppercase tracking-wider">{t.footer.contactTitle}</h4>
               <ul className="space-y-3">
                 {contactInfo.map((info, index) => (
-                  <motion.li key={index} className="flex items-start space-x-3 text-sm" whileHover={{ scale: 1.02 }}>
-                    <span className="text-gray-600 dark:text-gray-400 mt-0.5">{info.icon}</span>
+                  <motion.li key={index} className="flex items-center gap-3 text-sm" whileHover={{ scale: 1.02 }}>
+                    <span className="p-2 rounded-lg text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800">{info.icon}</span>
                     {info.href ? (
                       <a href={info.href} className="hover:text-gray-900 dark:hover:text-white transition-colors duration-300 text-gray-600 dark:text-gray-300">{info.text}</a>
                     ) : (

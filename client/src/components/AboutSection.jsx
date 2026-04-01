@@ -180,10 +180,10 @@ export const AboutSection = () => {
                 </button>
               </div>
               <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-background/50 rounded-xl border border-border">
-                <h4 className="font-semibold mb-2 text-center text-sm sm:text-base">{t.about.quickConnect}</h4>
-                <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
+                <h4 className="font-semibold mb-3 text-center text-sm sm:text-base">{t.about.quickConnect}</h4>
+                <div className="flex flex-wrap justify-center gap-2">
                   {socialLinks.map((social, index) => (
-                    <a key={index} href={social.href} className="p-2 bg-background rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-110">{social.icon}</a>
+                    <a key={index} href={social.href} className="p-2.5 rounded-lg bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 border border-transparent hover:border-primary/30 transition-all duration-300 hover:scale-110">{social.icon}</a>
                   ))}
                 </div>
               </div>
