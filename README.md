@@ -1,8 +1,10 @@
-# 💻 Portfolio - Elie Adetona
+# 💻 Elie Adetona - Portfolio
 
-Bienvenue sur mon portfolio! 👋 Je suis un développeur frontend passionné par la création d'applications web modernes et performantes.
+Bienvenue sur mon portfolio! 👋 Je suis un développeur **Frontend** passionné par la création d'applications web modernes et performantes.
 
-## 🎯 Qui suis-je?
+---
+
+## 🎯 À propos de moi
 
 Je suis actuellement en **Master 1** d'informatique (Diplôme en 2027) et je me spécialise dans le développement frontend. Mon objectif est de créer des expériences utilisateur exceptionnelles en utilisant les dernières technologies.
 
@@ -10,65 +12,33 @@ Je suis actuellement en **Master 1** d'informatique (Diplôme en 2027) et je me 
 
 **Status:** 🚀 Ouvert aux nouvelles opportunités
 
-## ✨ Ce que tu trouveras ici
+---
 
-- 📂 **7+ Projets** - De l'e-commerce aux SaaS, en passant par des MVPs
-- 💡 **Compétences** - Frontend, outils et technologies
-- 🎨 **Design moderne** - Interface épuée avec animations fluides
-- 🌍 **Multilingue** - Français et Anglais
-- 📱 **Responsive** - Parfait sur tous les appareils
+## 💼 Mon portfolio présente
 
-## 🛠 Technologies
+- **7+ Projets** - Du e-commerce aux SaaS, en passant par des MVPs innovants
+- **Compétences techniques** - React, Vue.js, TypeScript, et bien d'autres
+- **Design moderne** - Interface épurée avec animations fluides
+- **Multilingue** - Français et Anglais
 
-### Frontend
-- React 18, Vue.js
-- TypeScript, JavaScript
-- Tailwind CSS, Bootstrap, GSAP
+---
 
-### Autres
-- C, C++, Electron, Haskell
+## 🛠 Mon expertise
 
-### Outils
-- Vercel, Figma, Notion, Claude
+**Frontend:** React 18 • Vue.js • TypeScript • HTML • CSS • Tailwind • Bootstrap • GSAP
 
-## 🚀 Démarrer localement
+**Autres langages:** C • C++ • Haskell
 
-```bash
-# Clone le repo
-git clone https://github.com/Prince-Elie/Elieco-Portfolio.git
-cd Elieco-Portfolio/client
+**Outils:** Vercel • Figma • Notion • Claude
 
-# Installe les dépendances
-npm install
+---
 
-# Lance le serveur dev
-npm run dev
-```
-
-Ouvre [http://localhost:5173](http://localhost:5173) dans ton navigateur!
-
-## 📦 Build & Déploiement
-
-```bash
-# Build pour la production
-npm run build
-
-# Preview du build
-npm run preview
-```
-
-Le site est déployé automatiquement sur **Vercel** à chaque push sur `main`.
-
-## 📞 Contact
+## 📞 Me contacter
 
 - 📧 **Email:** obalayeprinceelie.adetona@ynov.com
 - 🔗 **LinkedIn:** [Prince Adetona](https://www.linkedin.com/in/prince-adetona-56942128b)
 - 💻 **GitHub:** [@Prince-Elie](https://github.com/Prince-Elie)
 
-## 📄 Mon CV
-
-Un fichier PDF avec mon CV complet est disponible dans le portfolio.
-
 ---
 
-**© 2026 - Elie Adetona | Tous droits réservés** 🎨
+**© 2026 - Elie Adetona** ✨
