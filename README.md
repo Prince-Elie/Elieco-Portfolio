@@ -2,6 +2,8 @@
 
 Bienvenue sur mon portfolio! 👋 Je suis un développeur **Frontend** passionné par la création d'applications web modernes et performantes.
 
+🌐 **[Visite mon portfolio](https://client-nu-peach-38.vercel.app)** ← Voir le site en live
+
 ---
 
 ## 🎯 À propos de moi
