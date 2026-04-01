@@ -63,7 +63,7 @@ const translations = {
         approach: "Approach",
       },
       tabContent: {
-        personal: "Passionate about creating digital solutions that make a difference. When I'm not coding, I'm exploring new technologies, contributing to open-source, and mentoring aspiring developers.",
+        personal: "Passionate about creating beautiful digital experiences. When I'm not coding, I enjoy playing football, learning new technologies, and staying active both physically and mentally.",
         professional: "Currently pursuing a Master 1 in Computer Science, I've built 7+ projects using modern frontend technologies. I specialize in beautiful interfaces, performance, and continuously expanding my skill set.",
         approach: "I believe in clean code, thorough testing, and user-centered design. My process emphasizes collaboration, agile methodologies, and continuous improvement.",
       },

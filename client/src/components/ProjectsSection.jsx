@@ -37,7 +37,7 @@ const projects = [
   {
     id: 1,
     title: "Vante & Co.",
-    category: "E-commerce",
+    category: "Landing page",
     description: "Fashion marketplace with product recommendations and seamless checkout experience.",
     image: "/projects/project1.png",
     video: "/projects/videos/vante-demo.mp4",
@@ -87,7 +87,7 @@ const projects = [
     video: "/projects/videos/spendlix-demo.mp4",
     tags: ["React", "Chart.js", "Node.js", "Firebase"],
     demoUrl: "https://spendlix.vercel.app/login",
-    githubUrl: "https://github.com/Prince-Elie/Spendlix",
+    githubUrl: "https://github.com/Prince-Elie",
     accentColor: "from-rose-500 to-pink-600",
     status: "Live",
     highlights: ["Expense tracking", "Data visualization", "Budget planning"]
@@ -124,7 +124,7 @@ const projects = [
 
 const categoryColors = {
   "Frontend Mentor Challenge": "from-emerald-500/20 to-teal-600/20 text-emerald-600 border-emerald-500/30",
-  "E-commerce": "from-purple-500/20 to-indigo-600/20 text-purple-600 border-purple-500/30",
+  "Landing page": "from-purple-500/20 to-indigo-600/20 text-purple-600 border-purple-500/30",
   "Real-time Communication": "from-blue-500/20 to-cyan-600/20 text-blue-600 border-blue-500/30",
   "Artificial Intelligence": "from-amber-500/20 to-orange-600/20 text-amber-600 border-amber-500/30",
   "FinTech": "from-rose-500/20 to-pink-600/20 text-rose-600 border-rose-500/30",

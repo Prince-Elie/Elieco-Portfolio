@@ -39,7 +39,7 @@ const WelcomeScreen = ({ onWelcomeComplete }) => {
     dark:  { primary: "hsl(210 40% 98%)",        secondary: "hsl(263.4 70% 50.4%)",   muted: "hsl(215 20.2% 65.1%)",   link: "hsl(217.2 91.2% 59.8%)" },
   };
   const currentColors = colors[theme] || colors.dark;
-  const portfolioUrl = "www.elieco.com";
+  const portfolioUrl = "https://github.com/Prince-Elie";
 
   const welcomeMessages = [
     t.welcome.badge1,
