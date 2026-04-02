@@ -20,6 +20,21 @@ const projects = [
     highlights: ["Responsive Design", "Smooth Animations", "Multi-language Support"]
   },
   {
+    id: 2,
+    title: "BulBAI",
+    category: "SaaS",
+    description: "AI-powered portfolio builder platform that generates professional portfolios instantly using intelligent templates and no-code interface.",
+    image: "/projects/project2.png",
+    video: "/projects/videos/converse-demo.mp4",
+    tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    demoUrl: "https://bulbai-zeta.vercel.app",
+    githubUrl: "https://github.com/Prince-Elie/bulbai",
+    featured: true,
+    accentColor: "from-blue-500 to-cyan-600",
+    status: "Live",
+    highlights: ["AI Portfolio Generation", "No-Code Builder", "Instant Deployment"]
+  },
+  {
     id: 1,
     title: "Drinkins",
     category: "Landing page",
@@ -33,6 +48,20 @@ const projects = [
     accentColor: "from-purple-500 to-indigo-600",
     status: "Live",
     highlights: ["Smooth GSAP Animations", "Responsive Design", "Performance Optimized"]
+  },
+  {
+    id: 4,
+    title: "Made with",
+    category: "Developer Tools",
+    description: "Collection of beautiful and reusable JavaScript effects and animations library for web developers.",
+    image: "/projects/project4.png",
+    video: "/projects/videos/spendlix-demo.mp4",
+    tags: ["TypeScript", "React", "Tailwind CSS", "Animations"],
+    demoUrl: "https://made-with.vercel.app/",
+    githubUrl: "https://github.com/Prince-Elie/made-with",
+    accentColor: "from-rose-500 to-pink-600",
+    status: "Live",
+    highlights: ["JS Effects Library", "Reusable Components", "High Performance"]
   },
   {
     id: 7,
@@ -50,22 +79,6 @@ const projects = [
     highlights: ["Fully Responsive", "Challenge Completed", "Clean Code"]
   },
   {
-    id: 2,
-    title: "Converse Pro",
-    category: "Real-time Communication",
-    description: "Chat platform with real-time messaging, media sharing, and user authentication.",
-    image: "/projects/project2.png",
-    video: "/projects/videos/converse-demo.mp4",
-    tags: ["Socket.IO", "MongoDB", "React", "WebRTC"],
-    demoUrl: "https://prince-elie.github.io/Drinkins",
-    githubUrl: "https://github.com/Prince-Elie/Drinkins",
-    featured: true,
-    accentColor: "from-blue-500 to-cyan-600",
-    status: "Live",
-    highlights: ["Real-time chat", "Media sharing", "User authentication"],
-    hidden: true
-  },
-  {
     id: 3,
     title: "Trackway",
     category: "FinTech",
@@ -77,21 +90,8 @@ const projects = [
     githubUrl: "https://github.com/Prince-Elie/trackway",
     accentColor: "from-amber-500 to-orange-600",
     status: "Live",
-    highlights: ["tracking", "Data visualization", "Budget planning"]
-  },
-  {
-    id: 4,
-    title: "Spendlix",
-    category: "FinTech",
-    description: "Financial tracking platform with expense management and budgeting features.",
-    image: "/projects/project4.png",
-    video: "/projects/videos/spendlix-demo.mp4",
-    tags: ["React", "Chart.js", "Node.js", "Firebase"],
-    demoUrl: "https://spendlix.vercel.app/login",
-    githubUrl: "https://github.com/Prince-Elie",
-    accentColor: "from-rose-500 to-pink-600",
-    status: "Live",
-    highlights: ["Expense tracking", "Data visualization", "Budget planning"]
+    highlights: ["tracking", "Data visualization", "Budget planning"],
+    hidden: true
   },
   {
     id: 5,
@@ -131,7 +131,10 @@ const categoryColors = {
   "Artificial Intelligence": "from-amber-500/20 to-orange-600/20 text-amber-600 border-amber-500/30",
   "FinTech": "from-rose-500/20 to-pink-600/20 text-rose-600 border-rose-500/30",
   "Food Tech": "from-violet-500/20 to-purple-600/20 text-violet-600 border-violet-500/30",
-  "Matching Tech": "from-orange-500/20 to-red-600/20 text-orange-600 border-orange-500/30"
+  "Matching Tech": "from-orange-500/20 to-red-600/20 text-orange-600 border-orange-500/30",
+  "Developer Tools": "from-cyan-500/20 to-blue-600/20 text-cyan-600 border-cyan-500/30",
+  "SaaS": "from-indigo-500/20 to-purple-600/20 text-indigo-600 border-indigo-500/30",
+  "Portfolio": "from-emerald-500/20 to-teal-600/20 text-emerald-600 border-emerald-500/30"
 };
 
 export const ProjectsSection = () => {
