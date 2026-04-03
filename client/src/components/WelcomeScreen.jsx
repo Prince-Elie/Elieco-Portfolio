@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { useTheme } from "next-themes";
-import { StarBackground } from "./StarBackground";
 import { SiReact, SiJavascript, SiTypescript, SiHtml5, SiCss3, SiCplusplus, SiGit, SiLinux, SiVuedotjs, SiVercel, SiBootstrap } from "react-icons/si";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -100,7 +99,6 @@ const WelcomeScreen = ({ onWelcomeComplete }) => {
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden">
-      <StarBackground />
       <motion.div className="h-full w-full flex items-center justify-center p-4 bg-background"
         variants={containerVariants} initial="hidden" animate={exitAnimation ? "exit" : "visible"}>
         <motion.div className="absolute inset-0 -z-10 overflow-hidden opacity-20">
