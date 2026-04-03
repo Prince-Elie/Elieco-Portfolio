@@ -123,7 +123,6 @@ const projects = [
 const categoryColors = {
   "Landing page": "from-purple-500/20 to-indigo-600/20 text-purple-600 border-purple-500/30",
   "Frontend Mentor Challenge": "from-emerald-500/20 to-teal-600/20 text-emerald-600 border-emerald-500/30",
-  "Landing page": "from-purple-500/20 to-indigo-600/20 text-purple-600 border-purple-500/30",
   "Real-time Communication": "from-blue-500/20 to-cyan-600/20 text-blue-600 border-blue-500/30",
   "Artificial Intelligence": "from-amber-500/20 to-orange-600/20 text-amber-600 border-amber-500/30",
   "FinTech": "from-rose-500/20 to-pink-600/20 text-rose-600 border-rose-500/30",

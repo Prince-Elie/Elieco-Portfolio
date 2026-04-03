@@ -1,6 +1,6 @@
 import { Mail, MapPin, Send, Loader2 } from "lucide-react";
 import { SiLinkedin, SiGithub } from "react-icons/si";
-
+import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
@@ -84,7 +84,7 @@ export const ContactSection = () => {
                   { icon: Mail,     label: "Email",    url: "mailto:obalayeprinceelie.adetona@ynov.com" },
                 ].map((social, index) => (
                   <a key={index} href={social.url} target="_blank" rel="noopener noreferrer"
-                    className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-accent hover:bg-primary/10 text-muted-foreground hover:text-primary transition-all duration-300" aria-label={social.label}>
+                    className="flex items-center justify-center p-2 sm:p-3 rounded-lg sm:rounded-xl bg-accent hover:bg-primary/10 text-muted-foreground hover:text-primary transition-all duration-300" aria-label={social.label}>
                     <social.icon className="h-4 w-4 sm:h-5 sm:w-5" />
                   </a>
                 ))}
