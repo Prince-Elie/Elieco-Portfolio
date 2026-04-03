@@ -155,30 +155,30 @@ export const HeroSection = () => {
               ))}
             </motion.div>
 
-            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            <motion.div className="flex flex-col gap-3 justify-center lg:justify-start"
               variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-3">
                 <motion.a href="https://www.linkedin.com/in/prince-adetona-56942128b" target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-5 py-3 rounded-xl bg-[#0A66C2] text-white font-medium text-sm shadow-lg"
+                  className="flex items-center gap-2 px-3 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-[#0A66C2] text-white font-medium text-xs sm:text-sm shadow-lg"
                   whileHover={{ scale: 1.08, y: -3, boxShadow: "0 8px 25px rgba(10,102,194,0.4)" }} whileTap={{ scale: 0.95 }}>
-                  <SiLinkedin className="h-5 w-5" /><span>{t.hero.linkedin}</span>
+                  <SiLinkedin className="h-4 w-4 sm:h-5 sm:w-5" /><span>{t.hero.linkedin}</span>
                 </motion.a>
                 <motion.a href="https://github.com/Prince-Elie" target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-5 py-3 rounded-xl bg-foreground text-background font-medium text-sm shadow-lg"
+                  className="flex items-center gap-2 px-3 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-foreground text-background font-medium text-xs sm:text-sm shadow-lg"
                   whileHover={{ scale: 1.08, y: -3, boxShadow: "0 8px 25px rgba(0,0,0,0.3)" }} whileTap={{ scale: 0.95 }}>
-                  <SiGithub className="h-5 w-5" /><span>{t.hero.github}</span>
+                  <SiGithub className="h-4 w-4 sm:h-5 sm:w-5" /><span>{t.hero.github}</span>
                 </motion.a>
                 <motion.a href="mailto:obalayeprinceelie.adetona@ynov.com"
-                  className="flex items-center gap-2 px-5 py-3 rounded-xl border border-primary/50 text-foreground bg-background/80 backdrop-blur-sm font-medium text-sm shadow-lg"
+                  className="flex items-center gap-2 px-3 sm:px-5 py-2.5 sm:py-3 rounded-xl border border-primary/50 text-foreground bg-background/80 backdrop-blur-sm font-medium text-xs sm:text-sm shadow-lg"
                   whileHover={{ scale: 1.08, y: -3, boxShadow: "0 8px 25px rgba(139,92,246,0.3)" }} whileTap={{ scale: 0.95 }}>
-                  <Mail className="h-5 w-5 text-primary" /><span>{t.hero.email}</span>
+                  <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-primary" /><span>{t.hero.email}</span>
                 </motion.a>
+                <motion.button onClick={handleViewResume}
+                  className="group px-3 sm:px-6 py-2.5 sm:py-3 rounded-xl font-medium border border-border text-muted-foreground hover:border-primary/30 transition-all duration-300 bg-background/60 backdrop-blur-sm text-xs sm:text-sm flex items-center justify-center gap-2"
+                  whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
+                  <Download className="h-4 w-4" /><span>{t.hero.resume}</span>
+                </motion.button>
               </div>
-              <motion.button onClick={handleViewResume}
-                className="group px-6 py-3 rounded-xl font-medium border border-border text-muted-foreground hover:border-primary/30 transition-all duration-300 bg-background/60 backdrop-blur-sm text-sm flex items-center justify-center gap-2"
-                whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
-                <Download className="h-4 w-4" /><span>{t.hero.resume}</span>
-              </motion.button>
             </motion.div>
 
             <motion.div className="mt-6 text-center lg:text-left"
@@ -192,7 +192,7 @@ export const HeroSection = () => {
           <motion.div className="flex-1 flex justify-center lg:justify-end w-full"
             variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
             <div className="relative w-full max-w-md">
-              <motion.div className="bg-background/90 border border-border rounded-2xl p-8 backdrop-blur-sm shadow-2xl w-full group hover:shadow-3xl transition-all duration-500" whileHover={{ y: -4 }} transition={{ type: "spring", stiffness: 400, damping: 25 }}>
+              <motion.div className="bg-background/90 border border-border rounded-2xl p-4 sm:p-8 backdrop-blur-sm shadow-2xl w-full group hover:shadow-3xl transition-all duration-500" whileHover={{ y: -4 }} transition={{ type: "spring", stiffness: 400, damping: 25 }}>
                 <div className="flex items-center gap-4 mb-6">
                   <div className="flex gap-2">
                     <div className="w-3 h-3 rounded-full bg-red-400/80" />
@@ -202,8 +202,8 @@ export const HeroSection = () => {
                   <div className="flex-1 text-center"><div className="text-sm font-mono font-semibold text-muted-foreground">portfolio.js</div></div>
                   <div className="w-4 h-4 bg-green-400/20 rounded-full animate-pulse" />
                 </div>
-                <div className="font-mono text-sm bg-primary/5 rounded-lg border border-primary/10 min-h-[280px] flex">
-                  <div className="p-6 w-full">
+                <div className="font-mono text-xs sm:text-sm bg-primary/5 rounded-lg border border-primary/10 min-h-[220px] sm:min-h-[280px] flex overflow-hidden">
+                  <div className="p-3 sm:p-6 w-full overflow-x-auto">
                     <div className="grid grid-cols-1 gap-1 h-full content-start">
                       {codeSnippets.map((line, index) => (
                         <div key={index} className={`min-h-[20px] flex items-start ${index < currentCodeLine ? 'opacity-100' : 'opacity-0'} ${index === currentCodeLine ? 'opacity-100' : ''} transition-opacity duration-150 ease-in-out ${line.includes("import") ? "text-purple-400 font-semibold" : line.includes("const") || line.includes("new") ? "text-blue-400 font-semibold" : line.includes("React") || line.includes("TypeScript") ? "text-cyan-400" : line.includes("//") ? "text-muted-foreground italic" : line.includes("await") || line.includes("connect") ? "text-yellow-400" : line.includes("'") ? "text-amber-400" : "text-foreground"}`}>

@@ -114,10 +114,10 @@ export const AboutSection = () => {
                   </div>
                   <div className="flex-1 text-center md:text-left">
                     <h2 className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">Elie ADETONA</h2>
-                    <div className="relative h-7 mb-3 sm:mb-4 overflow-hidden">
+                    <div className="relative h-8 mb-3 sm:mb-4 overflow-hidden">
                       <AnimatePresence mode="wait">
                         <motion.p key={ROLES[roleIdx]} className="text-primary text-base sm:text-lg font-semibold absolute inset-0 flex items-center justify-center md:justify-start"
-                          initial={{ y: 18, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: -18, opacity: 0 }} transition={{ duration: 0.35 }}>
+                          initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: -20, opacity: 0 }} transition={{ duration: 0.35 }}>
                           {ROLES[roleIdx]}
                         </motion.p>
                       </AnimatePresence>
