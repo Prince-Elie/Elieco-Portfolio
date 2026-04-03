@@ -4,10 +4,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 
 export const AboutSection = () => {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [activeTab, setActiveTab] = useState('personal');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [counter, setCounter] = useState(0);
+  const [roleIdx, setRoleIdx] = useState(0);
+
+  const ROLES = lang === "fr"
+    ? ["Développeur Logiciel", "Développeur Frontend"]
+    : ["Software Developer", "Frontend Developer"];
 
   const achievements = [
     { number: "M1",  label: t.about.stats.level,    icon: <Briefcase className="h-5 w-5" />, suffix: "" },
@@ -41,6 +46,11 @@ export const AboutSection = () => {
 
   // Reset tab label when language changes
   useEffect(() => { setActiveTab('personal'); }, [t]);
+
+  useEffect(() => {
+    const timer = setInterval(() => setRoleIdx(prev => (prev + 1) % ROLES.length), 3000);
+    return () => clearInterval(timer);
+  }, [ROLES.length]);
 
   const handleDownload = () => {
     const link = document.createElement('a');
@@ -104,7 +114,14 @@ export const AboutSection = () => {
                   </div>
                   <div className="flex-1 text-center md:text-left">
                     <h2 className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">Elie ADETONA</h2>
-                    <p className="text-primary text-base sm:text-lg font-semibold mb-3 sm:mb-4">Frontend Developer</p>
+                    <div className="relative h-7 mb-3 sm:mb-4 overflow-hidden">
+                      <AnimatePresence mode="wait">
+                        <motion.p key={ROLES[roleIdx]} className="text-primary text-base sm:text-lg font-semibold absolute inset-0 flex items-center justify-center md:justify-start"
+                          initial={{ y: 18, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: -18, opacity: 0 }} transition={{ duration: 0.35 }}>
+                          {ROLES[roleIdx]}
+                        </motion.p>
+                      </AnimatePresence>
+                    </div>
                     <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
                       {achievements.map((achievement, index) => (
                         <div key={index} className={`p-2 sm:p-3 rounded-xl bg-background/50 border border-border transition-all duration-300 hover:scale-105 hover:border-primary/30 ${counter === index ? 'bg-primary/10 border-primary/50' : ''}`}>

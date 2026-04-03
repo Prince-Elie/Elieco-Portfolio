@@ -3,8 +3,24 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { useTheme } from "next-themes";
 import { StarBackground } from "./StarBackground";
-import { SiReact, SiJavascript, SiTypescript, SiHtml5, SiCss3, SiCplusplus, SiGit } from "react-icons/si";
+import { SiReact, SiJavascript, SiTypescript, SiHtml5, SiCss3, SiCplusplus, SiGit, SiLinux, SiVuedotjs, SiVercel, SiBootstrap } from "react-icons/si";
 import { useLanguage } from "../context/LanguageContext";
+
+const WindframeIcon = ({ size = 28 }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none">
+    <path d="M3 8c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8Z" stroke="#06B6D4" strokeWidth="1.5"/>
+    <path d="M7 12h10M7 15h6" stroke="#06B6D4" strokeWidth="1.5" strokeLinecap="round"/>
+    <path d="M7 9h4" stroke="#38BDF8" strokeWidth="1.5" strokeLinecap="round"/>
+  </svg>
+);
+
+const SCATTERED_ICONS = [
+  { id: "linux",     Icon: SiLinux,     color: "#FCC624", top: "12%",  left: "3%",   rotate: -12, duration: 6,   delay: 0   },
+  { id: "vuejs",     Icon: SiVuedotjs,  color: "#4FC08D", top: "52%",  left: "5%",   rotate:  8,  duration: 7.5, delay: 1.2 },
+  { id: "bootstrap", Icon: SiBootstrap, color: "#7952B3", top: "78%",  left: "2.5%", rotate: -6,  duration: 5.5, delay: 2.1 },
+  { id: "vercel",    Icon: SiVercel,    color: null,      top: "20%",  right: "4%",  rotate:  10, duration: 8,   delay: 0.5 },
+  { id: "windframe", render: (s) => <WindframeIcon size={s} />, top: "62%", right: "3.5%", rotate: -8, duration: 7, delay: 0.9 },
+];
 
 const GsapIcon = ({ size = 28 }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="#88CE02" viewBox="0 0 24 24">
@@ -95,6 +111,21 @@ const WelcomeScreen = ({ onWelcomeComplete }) => {
             style={{ background: `linear-gradient(to right, ${currentColors.secondary}, #ec4899)` }}
             animate={{ x: [0, -30, 0], y: [0, 40, 0] }} transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }} />
         </motion.div>
+
+        {/* Scattered side icons */}
+        {SCATTERED_ICONS.map((item) => (
+          <motion.div key={item.id}
+            className="absolute hidden sm:flex items-center justify-center opacity-50 hover:opacity-80 transition-opacity"
+            style={{ top: item.top, left: item.left, right: item.right, rotate: `${item.rotate}deg` }}
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: item.duration, repeat: Infinity, repeatType: "reverse", ease: "easeInOut", delay: item.delay }}>
+            <div style={{ filter: "drop-shadow(0 0 6px currentColor)" }}>
+              {item.render
+                ? item.render(34)
+                : <item.Icon style={{ width: 34, height: 34, color: item.color || (theme === "dark" ? "#fff" : "#000") }} />}
+            </div>
+          </motion.div>
+        ))}
 
         <div className="w-full max-w-2xl mx-auto text-center px-4">
           <AnimatePresence>

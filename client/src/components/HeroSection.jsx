@@ -5,15 +5,18 @@ import { useRef, useState, useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
 
 export const HeroSection = () => {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [currentCodeLine, setCurrentCodeLine] = useState(0);
   const [displayedCode, setDisplayedCode] = useState("");
-  const [typedTitle, setTypedTitle] = useState("");
-  const [titleDone, setTitleDone] = useState(false);
+  const [roleText, setRoleText] = useState("");
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
-  const TITLE = t.hero.title;
+  const ROLES = lang === "fr"
+    ? ["Développeur Logiciel", "Développeur Frontend"]
+    : ["Software Developer", "Frontend Developer"];
 
   const codeSnippets = [
     "import { FrontendDeveloper } from 'elie.dev';",
@@ -39,21 +42,33 @@ export const HeroSection = () => {
     { number: "2027", label: t.hero.stats.graduating, icon: <Zap className="h-3 w-3" /> },
   ];
 
-  // Reset typewriter when language changes
+  // Reset cycling typewriter when language changes
   useEffect(() => {
-    setTypedTitle("");
-    setTitleDone(false);
-  }, [t]);
+    setRoleText("");
+    setRoleIndex(0);
+    setIsDeleting(false);
+  }, [lang]);
 
   useEffect(() => {
-    if (titleDone) return;
-    if (typedTitle.length < TITLE.length) {
-      const timer = setTimeout(() => setTypedTitle(TITLE.slice(0, typedTitle.length + 1)), 80);
-      return () => clearTimeout(timer);
+    const current = ROLES[roleIndex];
+    if (!isDeleting) {
+      if (roleText.length < current.length) {
+        const timer = setTimeout(() => setRoleText(current.slice(0, roleText.length + 1)), 80);
+        return () => clearTimeout(timer);
+      } else {
+        const timer = setTimeout(() => setIsDeleting(true), 2200);
+        return () => clearTimeout(timer);
+      }
     } else {
-      setTitleDone(true);
+      if (roleText.length > 0) {
+        const timer = setTimeout(() => setRoleText(roleText.slice(0, -1)), 45);
+        return () => clearTimeout(timer);
+      } else {
+        setIsDeleting(false);
+        setRoleIndex((prev) => (prev + 1) % ROLES.length);
+      }
     }
-  }, [typedTitle, titleDone, TITLE]);
+  }, [roleText, isDeleting, roleIndex]);
 
   useEffect(() => {
     const currentLine = codeSnippets[currentCodeLine];
@@ -113,12 +128,11 @@ export const HeroSection = () => {
               variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
               <span className="block text-foreground">{t.hero.greeting}</span>
               <span className="block bg-gradient-to-r from-primary via-purple-600 to-pink-600 bg-clip-text text-transparent mt-2" style={{ backgroundSize: '200% 100%' }}>
-                {typedTitle}
+                {roleText}
                 <motion.span
                   animate={{ opacity: [1, 0] }}
                   transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
                   className="inline-block w-[3px] h-[0.85em] bg-primary ml-1 align-middle"
-                  style={{ display: titleDone ? "none" : "inline-block" }}
                 />
               </span>
             </motion.h1>
