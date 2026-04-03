@@ -14,7 +14,6 @@ const projects = [
     tags: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
     demoUrl: "https://client-nu-peach-38.vercel.app",
     githubUrl: "https://github.com/Prince-Elie/Elieco-Portfolio",
-    featured: true,
     accentColor: "from-emerald-500 to-teal-600",
     status: "Live",
     highlights: ["Responsive Design", "Smooth Animations", "Multi-language Support"]
@@ -29,7 +28,6 @@ const projects = [
     tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     demoUrl: "https://bulbai-zeta.vercel.app",
     githubUrl: "https://github.com/Prince-Elie/bulbai",
-    featured: true,
     accentColor: "from-blue-500 to-cyan-600",
     status: "Live",
     highlights: ["AI Portfolio Generation", "No-Code Builder", "Instant Deployment"]
@@ -38,13 +36,12 @@ const projects = [
     id: 1,
     title: "Drinkins",
     category: "Landing page",
-    description: "Fashion marketplace with product recommendations and seamless checkout experience.",
+    description: "Beautiful and modern landing page with smooth GSAP animations, responsive design, and interactive components.",
     image: "/projects/project1.png",
     video: "/projects/videos/vante-demo.mp4",
     tags: ["HTML5", "CSS3", "JavaScript", "GSAP"],
     demoUrl: "https://prince-elie.github.io/Drinkins",
     githubUrl: "https://github.com/Prince-Elie/Drinkins",
-    featured: true,
     accentColor: "from-purple-500 to-indigo-600",
     status: "Live",
     highlights: ["Smooth GSAP Animations", "Responsive Design", "Performance Optimized"]
@@ -67,13 +64,12 @@ const projects = [
     id: 7,
     title: "Sunnyside ",
     category: "Frontend Mentor Challenge",
-    description: "Hospital management platform with multi-role access, patient tracking, and billing systems.",
+    description: "Frontend Mentor challenge - Modern landing page with pixel-perfect design and responsive layout.",
     image: "/projects/project7.png",
     video: "/projects/videos/nauracare-demo.mp4",
   tags: ["HTML", "CSS", "JavaScript"],
     demoUrl: "https://prince-elie.github.io/frontend-mentor-Sunnyside-landing-page-challenge/",
     githubUrl: "https://github.com/Prince-Elie/frontend-mentor-Sunnyside-landing-page-challenge",
-    featured: true,
     accentColor: "from-emerald-500 to-teal-600",
     status: "Live",
     highlights: ["Fully Responsive", "Challenge Completed", "Clean Code"]
@@ -125,6 +121,7 @@ const projects = [
 ];
 
 const categoryColors = {
+  "Landing page": "from-purple-500/20 to-indigo-600/20 text-purple-600 border-purple-500/30",
   "Frontend Mentor Challenge": "from-emerald-500/20 to-teal-600/20 text-emerald-600 border-emerald-500/30",
   "Landing page": "from-purple-500/20 to-indigo-600/20 text-purple-600 border-purple-500/30",
   "Real-time Communication": "from-blue-500/20 to-cyan-600/20 text-blue-600 border-blue-500/30",
