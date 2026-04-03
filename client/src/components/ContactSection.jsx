@@ -1,5 +1,6 @@
-import { Linkedin, Mail, MapPin, Send, Github, Loader2 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Mail, MapPin, Send, Loader2 } from "lucide-react";
+import { SiLinkedin, SiGithub } from "react-icons/si";
+
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
@@ -60,10 +61,10 @@ export const ContactSection = () => {
             </h3>
             <div className="space-y-4 sm:space-y-6">
               <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 hover:bg-accent/30 rounded-lg sm:rounded-xl transition-all duration-300">
-                <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-primary/10 text-primary"><Mail className="h-4 w-4 sm:h-5 sm:w-5" /></div>
-                <div>
+                <div className="flex-shrink-0 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-primary/10 text-primary"><Mail className="h-4 w-4 sm:h-5 sm:w-5" /></div>
+                <div className="min-w-0">
                   <p className="text-xs sm:text-sm text-muted-foreground">{t.contact.email}</p>
-                  <a href="mailto:obalayeprinceelie.adetona@ynov.com" className="text-sm sm:text-base font-medium hover:text-primary transition-colors">obalayeprinceelie.adetona@ynov.com</a>
+                  <a href="mailto:obalayeprinceelie.adetona@ynov.com" className="text-sm sm:text-base font-medium hover:text-primary transition-colors break-all">obalayeprinceelie.adetona@ynov.com</a>
                 </div>
               </div>
               <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 hover:bg-accent/30 rounded-lg sm:rounded-xl transition-all duration-300">
@@ -78,8 +79,8 @@ export const ContactSection = () => {
               <h4 className="font-medium mb-3 sm:mb-4 text-xs sm:text-sm text-muted-foreground">{t.contact.findMeOn}</h4>
               <div className="flex gap-2 sm:gap-3">
                 {[
-                  { icon: Linkedin, label: "LinkedIn", url: "https://www.linkedin.com/in/prince-adetona-56942128b" },
-                  { icon: Github,   label: "GitHub",   url: "https://github.com/Prince-Elie" },
+                  { icon: SiLinkedin, label: "LinkedIn", url: "https://www.linkedin.com/in/prince-adetona-56942128b" },
+                  { icon: SiGithub,   label: "GitHub",   url: "https://github.com/Prince-Elie" },
                   { icon: Mail,     label: "Email",    url: "mailto:obalayeprinceelie.adetona@ynov.com" },
                 ].map((social, index) => (
                   <a key={index} href={social.url} target="_blank" rel="noopener noreferrer"
