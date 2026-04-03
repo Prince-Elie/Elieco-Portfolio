@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Briefcase, Code, User, Download, Calendar, Sparkles, Target, Github, Linkedin, Mail, Star } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Briefcase, Code, User, Download, Calendar, Sparkles, Target, Mail, Star } from 'lucide-react';
+import { SiGithub, SiLinkedin } from 'react-icons/si';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -28,9 +29,9 @@ export const AboutSection = () => {
   ];
 
   const socialLinks = [
-    { icon: <Github className="h-5 w-5" />,   href: "https://github.com/Prince-Elie" },
-    { icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/in/prince-adetona-56942128b" },
-    { icon: <Mail className="h-5 w-5" />,     href: "mailto:obalayeprinceelie.adetona@ynov.com" },
+    { icon: <SiGithub className="h-5 w-5" />,   href: "https://github.com/Prince-Elie" },
+    { icon: <SiLinkedin className="h-5 w-5" />, href: "https://www.linkedin.com/in/prince-adetona-56942128b" },
+    { icon: <Mail className="h-5 w-5" />,       href: "mailto:obalayeprinceelie.adetona@ynov.com" },
   ];
 
   useEffect(() => {
@@ -44,7 +45,6 @@ export const AboutSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Reset tab label when language changes
   useEffect(() => { setActiveTab('personal'); }, [t]);
 
   useEffect(() => {
@@ -198,7 +198,7 @@ export const AboutSection = () => {
               </div>
               <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-background/50 rounded-xl border border-border">
                 <h4 className="font-semibold mb-3 text-center text-sm sm:text-base">{t.about.quickConnect}</h4>
-                <div className="flex flex-wrap justify-center gap-2">
+                <div className="flex flex-wrap justify-end gap-2">
                   {socialLinks.map((social, index) => (
                     <a key={index} href={social.href} className="p-2.5 rounded-lg bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 border border-transparent hover:border-primary/30 transition-all duration-300 hover:scale-110">{social.icon}</a>
                   ))}
