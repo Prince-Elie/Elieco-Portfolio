@@ -115,7 +115,7 @@ const WelcomeScreen = ({ onWelcomeComplete }) => {
         {/* Scattered side icons */}
         {SCATTERED_ICONS.map((item) => (
           <motion.div key={item.id}
-            className="absolute hidden sm:flex items-center justify-center opacity-50 hover:opacity-80 transition-opacity"
+            className="absolute flex items-center justify-center opacity-50 hover:opacity-80 transition-opacity"
             style={{ top: item.top, left: item.left, right: item.right, rotate: `${item.rotate}deg` }}
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: item.duration, repeat: Infinity, repeatType: "reverse", ease: "easeInOut", delay: item.delay }}>
